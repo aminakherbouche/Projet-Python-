@@ -201,9 +201,9 @@ while True:
         jeu.tas = jeu.tas + [random.randint(5, 23)]
 
     print "\n ---------------------- le jeu commence ---------------------- \n"
-    print "\n"
+  
     jeu.afficher_etat()
-    print "\n"
+    
 
     while not jeu.fini():
         jeu.next_round()
