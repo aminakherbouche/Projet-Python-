@@ -7,7 +7,7 @@ print ("-----------------  WELCOME TO THE GAME NIM ----------------- " )
 
 class player:
 	name = ""
-	bast_score = 0
+	best_score = 0
 	last_score = 0 
 	scores = []
 
