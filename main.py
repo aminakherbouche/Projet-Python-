@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-import random
-import re, operator 
+import random #generer les tas   aleatoirement class predefini 
+import re, operator  #detecter le format de l'utilisayeur
 
 print ("-----------------  WELCOME TO THE GAME NIM ----------------- " ) 
 
@@ -11,10 +11,10 @@ class player:
 	last_score = 0 
 	scores = []
 
-	 def __init__(self, name):
+	def __init__(self, name):
 		self.name = name.strip()
 
-	 def setScores(self, scores):
+	def setScores(self, scores):
 		self.scores = scores
 		self.scores = scores
 		self.best_score = max(scores)
@@ -28,7 +28,7 @@ class player:
 	def show(self):
 		print self.name + ", dernier score = " , self.last_score , ", meilleur score = ", self.best_score
 
-	 def play(self, jeu):
+	def play(self, jeu):
 		print self.name, ", c'est votre tour, introduisez <Numero du tas> - <Nombre de pierres a retirer>"
 		while True:
 		    user_input = raw_input()
@@ -55,4 +55,5 @@ while True:
     for i in range(0, nbr_de_tas, 1):
         jeu.tas = jeu.tas + [random.randint(5, 23)]
 
-print ("---------------------- le jeu commence ----------------------")
+    print ("---------------------- le jeu commence ----------------------")
+    jeu.afficher_etat()
